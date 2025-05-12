@@ -70,20 +70,54 @@
     color: #3a3939;
 }
 #sarah-elgendy{
-    background-image: url(/images/team/team-1.jpg);
+    background-image: url(images/team/team-1.jpg);
 }
 #ahmed-kamal{
-    background-image: url(/images/team/team-2.jpg);
+    background-image: url(images/team/team-2.jpg);
 }
 #ahmed-henary{
-    background-image: url(/images/team/team-3.jpg);
+    background-image: url(images/team/team-3.jpg);
 }
 #marwan-khedr{
-    background-image: url(/images/team/team-4.jpg);
+    background-image: url(images/team/team-4.jpg);
 }
 #rana-fawzy{
-    background-image: url(/images/team/team-5.jpg);
+    background-image: url(images/team/team-5.jpg);
 }
 #big-yasmeen{
-    background-image: url(/images/team/team-6.jpg);
+    background-image: url(images/team/team-6.jpg);
+}
+
+
+
+
+/* إضافة في نهاية الملف */
+
+@media (max-width: 1200px) {
+    .captains {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .card {
+        margin: 30px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .our-team,
+    .our-title {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .card {
+        width: 80%;
+        height: auto;
+    }
+
+    .card-img {
+        height: 300px;
+    }
 }

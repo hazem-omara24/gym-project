@@ -52,6 +52,7 @@ header ul li a:hover, .active{
     font-weight: bold;
     text-transform: uppercase;
 }
+
 .main{
     position: relative;
     height: 100vh;
@@ -60,7 +61,7 @@ header ul li a:hover, .active{
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-image: url(/images/hero-1.jpg) ;
+    background-image: url(images/hero-1.jpg) ;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -116,9 +117,9 @@ header ul li a:hover, .active{
     border-radius: 15px;
 }
 .content{
-   background-color: rgb(3, 3, 3);
-   flex-direction: row;
-   flex-wrap: wrap;
+    background-color: rgb(3, 3, 3);
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 .title{
     display: flex;
@@ -136,30 +137,32 @@ header ul li a:hover, .active{
     font-size: 30px;
     padding-bottom: 20px;
 }
+
+
 .cards{
     display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0 0 100px;
-}
-.cards-tips{
-    display: flex;
-    justify-content: left;
-    margin: 0 40px;
+    margin: 0 15px;
 }
 .card{
     background-color: rgb(3, 3, 3);
-    width: 300px;
+    width: 280px;
     display: inline;
     border: 1px solid #636262;
     border-radius: 10px;
     padding: 20px;
     margin: 15px;
+    transition: 0.5s ease;
+
 }
-.tips{
-    width: 370px;
-    margin: 100px 15px;
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 1);
+    z-index: 2;
+
 }
 .card-icon{
     display: flex;
@@ -191,8 +194,8 @@ header ul li a:hover, .active{
 }
 .classes{
     background-color: rgb(3, 3, 3);
-   flex-direction: row;
-   flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 .classes-container #main-classes{
     color: orangered;
@@ -214,9 +217,10 @@ header ul li a:hover, .active{
 .classes .cards .card{
     width: 350px;
     height: 300px;
+margin-bottom: 50px ;
 }
 .classes .cards  img{
-    width: 250px;
+    width: 100%;
     margin-bottom: 5px;
 }
 .description{
@@ -249,35 +253,34 @@ header ul li a:hover, .active{
     text-transform: uppercase;
     font-weight: 800;
 } 
-#cardio{
-    width: 550px;
-    height: 400px;
-}
-#cardio img{
-   width: 400px;
-}
-#cardio .description:hover{
-  transform: scale(1.01);
-}
+
 
 .footer-section{
     background-color: rgb(17, 17, 17);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    height: auto;
+    padding: 30px 0;
 }
 .footer-section .container{
-    display: flex;     
+    display: flex;  
+    justify-content: center;
+    align-items: center; 
+    text-align: center;  
     flex-direction: row;
     flex-wrap: wrap; 
     padding-top: 40px;
 }
 .sec{
     width: 300px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
-.sec .logo{
-    width: 100px;
+.sec a img{
+    width: 150px;
     margin-bottom: 20px;
 }
 .sec .depression p{
@@ -290,17 +293,17 @@ header ul li a:hover, .active{
 }
 .container .media a{
     color: #ffffff;
-    padding: 0 8px;
+    margin: 14px 0;
+    padding: 10px;
 }
 #links-sec{
-    margin-left: 30px;
     width: 250px;
 }
 #links-sec .sec-title,#support-sec .sec-title{
     color: #fff;
     font-weight: 800;
     font-size: 22px;
-    margin-bottom: 28px;
+    margin-top: 10px;
 }
 #links-sec ul ,#support-sec ul{
     list-style: none;
@@ -314,18 +317,130 @@ header ul li a:hover, .active{
     color: #a9a9a9;
     font-family: "Muli", sans-serif;
 }
-.copy-right{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;;
-    background-color: rgb(17, 17, 17);
-    padding-bottom: 40px;
+
+.hamburger {
+    display: none;
+    cursor: pointer;
 }
-.copy-right .text{
-    color:#a9a9a9;
-    font-size: 20px;
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        margin: 5px 0;
+    }
+
+    header ul.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        background: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        padding: 20px 0;
+    }
 }
-.text i ,.text a{
-    color: orangered;
+
+
+
+/* إضافة في نهاية الملف */
+@media (max-width: 1200px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    .main .container {
+        margin-left: 200px;
+        width: 300px;
+    }
+
+    .cards {
+        justify-content: center;
+    }
+
+    #courses .card {
+        margin: 35px;
+    }
+
 }
+
+@media (max-width: 768px) {
+    header ul {
+        display: none;
+    }
+    header ul li{
+        margin: 10px 0;
+    }
+    .main .container {
+        margin-left: 0;
+        text-align: center;
+        width: 80%;
+    }
+
+    .main .container h2 {
+        font-size: 36px;
+    }
+
+    .card {
+        width: 80%;
+        margin: 15px 0;
+    }
+
+    .classes .cards .card {
+        width: 60%;
+    }
+
+    #courses .card {
+        margin: 35px;
+    }
+
+    #courses .card .img-course img {
+        width: 80%;
+    }
+
+    #courses .card .description {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .main .container h2 {
+        font-size: 28px;
+    }
+
+    .contact-head h1 {
+        font-size: 40px;
+        padding-top: 150px;
+    }
+
+    .contact-head ul li a {
+        font-size: 18px;
+    }
+
+    #courses .card {
+        margin: 15px;
+    }
+
+    #courses .card .description {
+        width: 100%;
+        height: 50px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #courses .card .description h5 {
+        margin: 0;
+        font-size: 20px;
+    }
+
+}
+

@@ -1,0 +1,107 @@
+/* الشاشات الأصغر من 768px (موبايل) */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        position: absolute;
+    }
+
+    header ul {
+        flex-direction: row;
+        width: 100%;
+        padding: 10px;
+    }
+
+    header ul li {
+        margin: 10px 0;
+    }
+
+    .main .container {
+        width: 90%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .main .container a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .classes .cards .card {
+        width: 90%;
+        height: auto;
+    }
+
+    .footer-section .container {
+        flex-direction: column;
+    }
+
+    .sec {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* بين 768px و 991px (تابلتات) */
+@media screen and (min-width: 769px) and (max-width: 991px) {
+    header {
+        flex-direction: column;
+        position: absolute;
+    }
+
+    header ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main .container {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .card {
+        width: 45%;
+    }
+
+    .classes .cards .card {
+        width: 45%;
+        margin: 50px 15px;
+    }
+
+    .footer-section .container {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+/* بين 992px و 1600px */
+@media screen and (min-width: 992px) and (max-width: 1600px) {
+    .main .container {
+        margin-left: 200px;
+        width: 500px;
+    }
+
+    .card {
+        width: 300px;
+    }
+
+    .classes .cards .card {
+        width: 320px;
+        height: 300px;
+        margin: 30px 15px;
+    }
+
+    .footer-section .container {
+        justify-content: space-around;
+    }
+}
